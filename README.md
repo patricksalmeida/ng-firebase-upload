@@ -5,3 +5,6 @@ This project was created to study and implement upload files, functionality it's
 The first step is create Firebase project and insert configs into environment file. Then execute the following command:
 
 ``` ng serve ```
+
+## Project Preview
+![Project Screenshot Preview](https://github.com/patricksalmeida/ng-firebase-upload/blob/master/src/assets/preview.png?raw=true)
