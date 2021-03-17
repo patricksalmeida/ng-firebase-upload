@@ -1,0 +1,20 @@
+<div class="file">
+  <img class="file-thumb" *ngIf="!!isImageFile && downloadURL" [src]="downloadURL" alt="">
+  <div class="file-thumb-background" *ngIf="!!isDocumentFile && downloadURL">
+    <img class="file-thumb-doc" [src]="documentIconPath" alt="">
+  </div>
+
+  <div class="file-container">
+    <span class="file-name">{{ file.name }}</span>
+    <span class="file-size">Tamanho: {{ file.size }}MB</span>
+    
+    <div class="file-infos">
+      <div class="file-progress" *ngIf="percentage | async as progress">
+        <div class="progress" [ngStyle]="{ 'width.%': progress }"></div>
+      </div>
+      <div class="file-transfer" *ngIf="snapshot | async as snap">
+        <span>{{ snap.bytesTransferred }} of {{ snap.totalBytes }} </span>
+      </div>
+    </div>
+  </div>
+</div>

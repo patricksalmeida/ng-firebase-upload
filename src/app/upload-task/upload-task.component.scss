@@ -1,0 +1,83 @@
+.file {
+  display: flex;
+  align-items: center;
+  max-height: 80px;
+
+  border-radius: 8px;
+  
+  background-color: #eee;
+  
+  .file-thumb {
+    height: 80px;
+    width: 100px;
+
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .file-thumb-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 80px;
+
+    background-color: blue;
+    border-radius: 8px 0 0 8px;
+
+    .file-thumb-doc {
+      height: 40px;
+    }
+  }
+
+  .file-thumb-span {
+    height: 80px;
+    width: 100px;
+
+    background-color: blue;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .file-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    width: 100%;
+
+    .file-name {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  
+    .file-size {
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 4px;
+    }
+
+    .file-infos {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .file-progress {
+        height: 8px;
+        margin-top: 8px;
+        background-color: #d8d8d8;
+        flex: 1;
+        margin-right: 8px;
+    
+        .progress {
+          height: 100%;          
+          background-color: blue;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}

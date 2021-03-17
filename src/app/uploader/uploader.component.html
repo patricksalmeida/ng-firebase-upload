@@ -1,0 +1,20 @@
+<div class="dropzone" 
+  (dragover)="toggleHover(true)" 
+  (dragleave)="toggleHover(false)"   
+  [class.hovering]="isHovering">
+  <input type="file" multiple (change)="onDrop($event.target.files)"  class="input-file">
+  
+  <img src="assets/upload.svg" alt="" class="upload-icon">
+
+  <h3>Upload your files</h3>
+  <p>Drag and Drop your files here</p>
+</div>
+
+<div class="files-container" *ngIf="!!files && !!files.length">
+  <span class="files-title">You're files</span>
+  <div class="files">
+    <div *ngFor="let file of files">
+      <app-upload-task class="file" [file]="file"></app-upload-task>
+    </div>
+  </div>
+</div>
